@@ -1,7 +1,15 @@
-import './app.css';
+import "./app.css";
+import Search from "./components/search";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import VideoContainer from "./components/videoContainer";
 
 function App() {
-  return <h1>Hello :)</h1>;
+  return (
+    <>
+      <Search />
+      <VideoContainer />
+    </>
+  );
 }
 
 export default App;

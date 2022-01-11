@@ -1,38 +1,78 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+#root,
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.search-container {
+  width: 80%;
+  height: 60px;
+  margin: 0 auto;
+  background-color: rgb(22, 21, 21);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-form {
+  display: inline-block;
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  line-height: 60px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.youtube-logo {
+  position: relative;
+  color: red;
+  font-size: 50px;
+  margin-right: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.youtube-name {
+  display: inline-block;
   color: white;
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 10px;
+  transform: translateY(-8px);
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar {
+  width: 80%;
+  height: 80%;
+  font-size: 25px;
+  border: none;
+  padding-left: 10px;
+  transform: translateY(-8px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-btn {
+  width: 50px;
+  height: 80%;
+  background-color: gray;
+  color: whitesmoke;
+  font-size: 25px;
+  text-align: center;
+  border: none;
+  transform: translateY(-8px);
+}
+
+.content-container {
+  position: relative;
+  width: 80%;
+  height: 94%;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.video-card {
+  display: inline-block;
+  width: 50%;
+  height: 200px;
+  background-color: lightgreen;
+  border: 2px solid black;
 }
