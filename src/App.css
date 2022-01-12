@@ -9,70 +9,120 @@ body {
   height: 100%;
 }
 
+/* search.jsx */
 .search-container {
-  width: 80%;
-  height: 60px;
+  display: flex;
+  max-width: 1200px;
+  height: 4rem;
   margin: 0 auto;
   background-color: rgb(22, 21, 21);
-  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.search-form {
-  display: inline-block;
-  width: 95%;
-  height: 100%;
-  margin: 0 auto;
-  line-height: 60px;
+.logo-name-wrapper {
+  display: inline-flex;
+  align-items: center;
 }
 
 .youtube-logo {
   position: relative;
   color: red;
-  font-size: 50px;
-  margin-right: 10px;
+  font-size: 3rem;
+  float: left;
+  /* margin: 0 5%; */
 }
 
 .youtube-name {
   display: inline-block;
   color: white;
-  font-size: 25px;
+  font-size: 2rem;
   font-weight: bold;
-  margin-right: 10px;
-  transform: translateY(-8px);
+  margin-right: 1rem;
+}
+
+.search-form {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  float: right;
+  justify-content: center;
+  align-items: center;
 }
 
 .search-bar {
-  width: 80%;
+  display: inline-block;
+  width: 90%;
   height: 80%;
-  font-size: 25px;
+  font-size: 2rem;
   border: none;
-  padding-left: 10px;
-  transform: translateY(-8px);
 }
 
 .search-btn {
-  width: 50px;
+  width: 3rem;
   height: 80%;
   background-color: gray;
   color: whitesmoke;
-  font-size: 25px;
+  font-size: 2rem;
   text-align: center;
   border: none;
-  transform: translateY(-8px);
 }
 
+/* videoContainer.jsx */
 .content-container {
   position: relative;
-  width: 80%;
-  height: 94%;
+  max-width: 1200px;
   margin: 0 auto;
   border: 1px solid black;
 }
 
+/* videoCard.jsx */
 .video-card {
-  display: inline-block;
+  position: relative;
+  display: inline-flex;
   width: 50%;
-  height: 200px;
+  min-width: 150px;
   background-color: lightgreen;
   border: 2px solid black;
+  align-items: center;
+}
+
+.video-thumbnail {
+  width: 40%;
+  float: left;
+}
+
+.video-thumbnail > img {
+  width: 100%;
+}
+
+.video-description {
+  display: inline-block;
+  position: relative;
+  width: 60%;
+  padding: 0 1rem;
+}
+
+.video-title {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: red;
+}
+
+.video-channel {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  color: gray;
+  background-color: blue;
+}
+
+@media screen and (max-width: 900px) {
+  .video-card {
+    width: 100%;
+  }
 }

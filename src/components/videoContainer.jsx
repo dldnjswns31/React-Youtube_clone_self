@@ -1,12 +1,13 @@
 import React from "react";
+import VideoCard from "./videoCard";
 
 function VideoContainer(props) {
   return (
     <>
       <div className="content-container">
-        <div className="video-card"></div>
-        <div className="video-card"></div>
-        <div className="video-card"></div>
+        <VideoCard />
+        <VideoCard />
+        <VideoCard />
       </div>
     </>
   );
