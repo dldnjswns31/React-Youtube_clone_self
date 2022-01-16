@@ -12,18 +12,3 @@ const VideoContainer = (props) => {
 };
 
 export default VideoContainer;
-
-// import React, { useEffect, useState } from "react";
-// import VideoCard from "VideoCard";
-
-// function VideoContainer(props) {
-//   return (
-//     <>
-//       <div className="content-container">
-//         <VideoCard />
-//       </div>
-//     </>
-//   );
-// }
-
-// export default VideoContainer;

@@ -11,10 +11,14 @@ class Search extends Component {
     this.props.onSubmit(value);
   };
 
+  handleClick = () => {
+    this.props.onClick();
+  };
+
   render() {
     return (
       <div className="search-container">
-        <div className="logo-name-wrapper">
+        <div className="logo-name-wrapper" onClick={this.handleClick}>
           <span className="youtube-logo">
             <FontAwesomeIcon icon={faYoutube} />
           </span>

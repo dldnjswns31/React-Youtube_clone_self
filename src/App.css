@@ -91,6 +91,7 @@ body {
   border: 2px solid black;
   align-items: center;
   text-align: left;
+  cursor: pointer;
 }
 
 .video-thumbnail {
