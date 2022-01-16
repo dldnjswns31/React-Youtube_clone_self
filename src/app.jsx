@@ -6,16 +6,12 @@ import React from "react";
 
 function App() {
   const [videos, setVideo] = useState([]);
-
-  // const inputRef = React.createRef();
-  // let value = inputRef.current.value;
+  const requestOptions = {
+    method: "GET",
+    redirect: "follow",
+  };
 
   useEffect(() => {
-    const requestOptions = {
-      method: "GET",
-      redirect: "follow",
-    };
-
     fetch(
       "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyDD8izz7zlkkCSF97v-Qw0mEJQHuIADzxI",
       requestOptions
@@ -26,11 +22,6 @@ function App() {
   }, []);
 
   const handleSubmit = (value) => {
-    const requestOptions = {
-      method: "GET",
-      redirect: "follow",
-    };
-
     fetch(
       `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${value}&key=AIzaSyDD8izz7zlkkCSF97v-Qw0mEJQHuIADzxI`,
       requestOptions
