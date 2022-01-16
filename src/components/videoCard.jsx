@@ -1,17 +1,33 @@
 import React from "react";
 
-function VideoCard(props) {
-  return (
-    <div className="video-card">
-      <div className="video-thumbnail">
-        <img src="https://i.ytimg.com/vi/P2Li7mjadIA/hqdefault.jpg" />
-      </div>
-      <div className="video-description">
-        <span className="video-title">123</span>
-        <span className="video-channel">456</span>
-      </div>
+const VideoCard = (props) => (
+  <div className="video-card">
+    <div className="video-thumbnail">
+      <img src={props.video.snippet.thumbnails.high.url} />
     </div>
-  );
-}
+    <div className="video-description">
+      <span className="video-title">{props.video.snippet.title}</span>
+      <span className="video-channel">{props.video.snippet.channelTitle}</span>
+    </div>
+  </div>
+);
 
 export default VideoCard;
+
+// import React from "react";
+
+// function VideoCard(props) {
+//   return (
+//     <div className="video-card">
+//       <div className="video-thumbnail">
+//         <img src={props.thumbnail} />
+//       </div>
+//       <div className="video-description">
+//         <span className="video-title">{props.title}</span>
+//         <span className="video-channel">{props.channelTitle}</span>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default VideoCard;

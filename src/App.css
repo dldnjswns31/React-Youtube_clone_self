@@ -9,7 +9,7 @@ body {
   height: 100%;
 }
 
-/* search.jsx */
+/* ------------------- search.jsx -------------------*/
 .search-container {
   display: flex;
   max-width: 1200px;
@@ -30,7 +30,7 @@ body {
   color: red;
   font-size: 3rem;
   float: left;
-  /* margin: 0 5%; */
+  margin-right: 20px;
 }
 
 .youtube-name {
@@ -54,6 +54,7 @@ body {
   display: inline-block;
   width: 90%;
   height: 80%;
+  padding-left: 1rem;
   font-size: 2rem;
   border: none;
 }
@@ -68,23 +69,28 @@ body {
   border: none;
 }
 
-/* videoContainer.jsx */
+/* ------------------- videoContainer.jsx -------------------*/
 .content-container {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0;
   border: 1px solid black;
+  text-align: center;
 }
 
-/* videoCard.jsx */
+/* ------------------- videoCard.jsx ------------------- */
 .video-card {
   position: relative;
   display: inline-flex;
-  width: 50%;
+  width: 45%;
   min-width: 150px;
-  background-color: lightgreen;
+  margin: 10px 10px;
+  padding: 10px;
+  /* background-color: lightgreen; */
   border: 2px solid black;
   align-items: center;
+  text-align: left;
 }
 
 .video-thumbnail {
@@ -93,7 +99,9 @@ body {
 }
 
 .video-thumbnail > img {
+  display: block;
   width: 100%;
+  border-radius: 5px;
 }
 
 .video-description {
@@ -108,9 +116,9 @@ body {
   position: relative;
   width: 100%;
   margin-bottom: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .video-channel {
@@ -118,11 +126,14 @@ body {
   position: relative;
   width: 100%;
   color: gray;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 @media screen and (max-width: 900px) {
   .video-card {
     width: 100%;
+  }
+  .video-card {
+    margin: 0;
   }
 }
