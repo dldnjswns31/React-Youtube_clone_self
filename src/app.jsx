@@ -1,12 +1,12 @@
 import "./app.css";
-import Search from "./components/search";
 import { useEffect, useState } from "react";
+import Search from "./components/search";
 import VideoContainer from "./components/videoContainer";
 import React from "react";
-import { render } from "@testing-library/react";
 
 function App() {
   const [videos, setVideo] = useState([]);
+  const [isHidden, setHidden] = useState(false);
   const requestOptions = {
     method: "GET",
     redirect: "follow",
@@ -32,7 +32,7 @@ function App() {
       .catch((error) => console.log("error", error));
   };
 
-  const handleClick = () => {
+  const handleLogoClick = () => {
     fetch(
       "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyDD8izz7zlkkCSF97v-Qw0mEJQHuIADzxI",
       requestOptions
@@ -41,10 +41,19 @@ function App() {
       .then((result) => setVideo(result.items))
       .catch((error) => console.log("error", error));
   };
+
+  const handleVideoClick = () => {
+    setHidden(true);
+  };
+
   return (
     <>
-      <Search onSubmit={handleSubmit} onClick={handleClick} />
-      <VideoContainer video={videos} />
+      <Search onSubmit={handleSubmit} onClick={handleLogoClick} />
+      <VideoContainer
+        video={videos}
+        isHidden={isHidden}
+        onClick={handleVideoClick}
+      />
     </>
   );
 }
