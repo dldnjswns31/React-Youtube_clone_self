@@ -2,7 +2,7 @@ import React from "react";
 
 const VideoCard = (props) => {
   const handleVideoClick = () => {
-    props.onClick();
+    props.onClick(props.video);
   };
 
   return (
@@ -11,8 +11,10 @@ const VideoCard = (props) => {
         <img src={props.video.snippet.thumbnails.high.url} />
       </div>
       <div className="video-description">
-        <h3 className="video-title">{props.video.snippet.title}</h3>
-        <h4 className="video-channel">{props.video.snippet.channelTitle}</h4>
+        <span className="video-title">{props.video.snippet.title}</span>
+        <span className="video-channel">
+          {props.video.snippet.channelTitle}
+        </span>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import React from "react";
 
 function App() {
   const [videos, setVideo] = useState([]);
-  const [isHidden, setHidden] = useState(false);
+  const [selectedVideo, setSelectedVideo] = useState(null);
   const requestOptions = {
     method: "GET",
     redirect: "follow",
@@ -30,6 +30,7 @@ function App() {
       .then((response) => response.json())
       .then((result) => setVideo(result.items))
       .catch((error) => console.log("error", error));
+    setSelectedVideo(null);
   };
 
   const handleLogoClick = () => {
@@ -40,10 +41,12 @@ function App() {
       .then((response) => response.json())
       .then((result) => setVideo(result.items))
       .catch((error) => console.log("error", error));
+    setSelectedVideo(null);
   };
 
-  const handleVideoClick = () => {
-    setHidden(true);
+  const handleVideoClick = (item) => {
+    setSelectedVideo(item);
+    console.log(item);
   };
 
   return (
@@ -51,7 +54,7 @@ function App() {
       <Search onSubmit={handleSubmit} onClick={handleLogoClick} />
       <VideoContainer
         video={videos}
-        isHidden={isHidden}
+        selectedVideo={selectedVideo}
         onClick={handleVideoClick}
       />
     </>
